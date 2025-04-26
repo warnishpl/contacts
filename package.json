@@ -1,0 +1,11 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently -n CLIENT,SERVER -c blue,green \"npm run dev --prefix client\" \"npm run start --prefix server/backend\"",
+    "start": "concurrently \"npm run build --prefix client && npm run preview --prefix client\" \"npm run start --prefix server/backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

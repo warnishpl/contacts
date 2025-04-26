@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Frontend",
+      "type": "shell",
+      "command": "npm run dev --prefix client",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Backend",
+      "type": "shell",
+      "command": "npm run start --prefix server/backend",
+      "problemMatcher": []
+    },
+    {
+      "label": "Start All",
+      "dependsOn": ["Frontend", "Backend"],
+      "dependsOrder": "parallel",
+      "problemMatcher": []
+    }
+  ]
+}
